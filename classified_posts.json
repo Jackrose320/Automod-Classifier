@@ -1,0 +1,12 @@
+[
+    {
+        "post_id": 1,
+        "post_text": "I hate this, you're so stupid!",
+        "bannable_detected": true
+    },
+    {
+        "post_id": 2,
+        "post_text": "I love this world.",
+        "bannable_detected": false
+    }
+]
