@@ -1,4 +1,6 @@
 import nltk
+nltk.download('punkt')
+nltk.download('punkt_tab')
 from nltk.tokenize import word_tokenize
 from nltk.classify.scikitlearn import SklearnClassifier
 import pickle
@@ -7,7 +9,7 @@ import json
 model_file_path = 'toxic_comment_classifier.pkl' # Classifier
 # Note: This should be created using python automod_model.py beforehand.
 
-output_json_path = 'classified_posts.json' # Could replace with original?
+output_json_path = 'posts.json' # Could replace with original?
 
 # reuse model without training again:
 with open(model_file_path, 'rb') as model_file:
@@ -18,20 +20,9 @@ def create_feature_set(text):
     return {word: True for word in words}
 
 # Example json, replace with actual posts:
-input_json = '''
-[
-    {
-    "post_id": 1,
-    "post_text": "I hate this, you're so stupid!"
-    },
-    {
-        "post_id": 2,
-        "post_text": "I love this world."
-    }
-]
-'''
+with open("posts.json", "r", encoding="utf-8") as json_file:
+    post_data = json.load(json_file)
 
-post_data = json.loads(input_json)
 def classify_post(post):
     features = create_feature_set(post['post_text']) # could replace 'post_text' with whatever the post label is
     prediction = classifier.classify(features)

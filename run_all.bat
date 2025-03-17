@@ -1,0 +1,6 @@
+@echo off
+echo Running query.py...
+python query.py
+echo Running classify_post.py...
+python classify_post.py
+echo Done!
