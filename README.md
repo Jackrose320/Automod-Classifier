@@ -13,7 +13,7 @@ This is a moderation bot that uses a [Logistic Regression](https://en.m.wikipedi
 
 *Note, this file has already been loaded and is the complete model with all data trained (this is why it is so large!). It would be a pain to download it, so think carefully before downloading without changing the model parameters.*
 
-3. Then, run classify_post.py with the necessary JSON files added (and the output JSON changed).
+3. Then, run sh run_all.sh with the necessary JSON files added (and the output JSON changed) in query.py.
 
 ## What does this do?
 
