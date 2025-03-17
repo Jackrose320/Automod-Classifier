@@ -15,6 +15,10 @@ This is a moderation bot that uses a [Logistic Regression](https://en.m.wikipedi
 
 3. Then, run classify_post.py with the necessary JSON files added (and the output JSON changed).
 
+## What does this do?
+
+This program takes details for a postgreSQL database that has "post" fields, and creates a json of the post content and post IDs. From there, it turns this data into a json. The classifier reads this json for the post content and declares each post as being "bannable" or not. It gives this label to a new "is_bannable" label in the same json file, corresponding to each post!
+
 ## Dataset:
 [Larry Freeman multi-lingual Set](https://www.kaggle.com/datasets/larryfreeman/toxic-comments-french-spanish-german-train)
 *478713 data points!*
