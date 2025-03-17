@@ -5,9 +5,11 @@ This is a moderation bot that uses a [Logistic Regression](https://en.m.wikipedi
 
 ## How to use:
 
-1. You can activate the necessary modules by running "myenv\Scripts\activate".
+1. You can activate the necessary modules by running *python -m venv .venv* and calling "./venv/Scripts/activate".
 
-2. If you would like to change the automod model to view different languages or use less sample data, you must write the changes in automod_model.py and run this file to change [toxic_comment_classifier.pkl](https://github.com/Jackrose320/Automod-Classifier/blob/master/toxic_comment_classifier.pkl).
+3. To connect to your postgreSQL database, add the connection details in the [query.py](https://github.com/Jackrose320/Automod-Classifier/blob/master/query.py) file.
+
+4. If you would like to change the automod model to view different languages or use less sample data, you must write the changes in automod_model.py and run this file to change [toxic_comment_classifier.pkl](https://github.com/Jackrose320/Automod-Classifier/blob/master/toxic_comment_classifier.pkl).
 
 *Note, this file has already been loaded and is the complete model with all data trained (this is why it is so large!). It would be a pain to download it, so think carefully before downloading without changing the model parameters.*
 
